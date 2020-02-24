@@ -2,7 +2,7 @@ const path = require('path');
 
 /**
  * Runs on Association Manager CI
- * https://github.com/akveo/kittenTricks/blob/master/.github/workflows/publish-pr.yml
+ * https://github.com/akveo/AssociationManager/blob/master/.github/workflows/publish-pr.yml
  */
 module.exports = {
   ENV: 'ci',
