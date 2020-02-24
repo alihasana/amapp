@@ -5,15 +5,13 @@
     "version": "0.0.1",
     "sdkVersion": "36.0.0",
     "description": "Application mobile for assocaiton manager with UI Kitten Template",
-    "githubUrl": "",
+    "githubUrl": "https://github.com/alihasana/amapp",
     "ios": {
       "bundleIdentifier": "oualpaif.corp",
-      "appStoreUrl": "",
       "buildNumber": "3"
     },
     "android": {
       "package": "oualpaif.corp",
-      "playStoreUrl": "",
       "versionCode": 3
     },
     "privacy": "public",

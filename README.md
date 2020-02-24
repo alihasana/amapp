@@ -54,18 +54,18 @@ Easy way to integrate UI Kitten with backend ([Java][link:ui-kitten-bundle-java]
 Made with :heart: by [Akveo team][link:akveo-homepage]. Follow us on [Twitter][link:akveo-twitter] to get the latest news first!
 We're always happy to receive your feedback!
 
-[badge:github-actions]: https://github.com/akveo/kittenTricks/workflows/Build/badge.svg
+[badge:github-actions]: https://github.com/akveo/AssociationManager/workflows/Build/badge.svg
 [badge:expo]: https://img.shields.io/badge/Runs%20with%20Expo-000.svg?style=flat&logo=EXPO&labelColor=ffffff&logoColor=000
 [badge:netlify]: https://api.netlify.com/api/v1/badges/95cdef77-0d68-49a1-a497-b305bb5e3f98/deploy-status
 
-[link:github-actions]: https://github.com/akveo/kittenTricks/actions
+[link:github-actions]: https://github.com/akveo/AssociationManager/actions
 [link:expo]: https://expo.io/@ui-kitten/kitten-tricks
 [link:netlify]: https://kitten-tricks.netlify.com
 [link:eva]: https://eva.design
 [link:doc-ui-kitten]: https://akveo.github.io/react-native-ui-kitten
 [link:ui-kitten]: https://github.com/akveo/react-native-ui-kitten
 [link:app-store]: https://itunes.apple.com/us/app/kitten-tricks/id1246143230
-[link:google-play]: https://play.google.com/store/apps/details?id=com.akveo.kittenTricks
+[link:google-play]: https://play.google.com/store/apps/details?id=com.akveo.AssociationManager
 [link:eva-icons]: https://github.com/akveo/eva-icons
 [link:akveo-homepage]: https://akveo.com
 [link:akveo-medium]: https://medium.com/akveo-engineering
