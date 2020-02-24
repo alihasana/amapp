@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Association Manager",
+    "slug": "association-manager",
+    "version": "0.0.1",
+    "sdkVersion": "36.0.0",
+    "description": "Application mobile for assocaiton manager with UI Kitten Template",
+    "githubUrl": "",
+    "ios": {
+      "bundleIdentifier": "oualpaif.corp",
+      "appStoreUrl": "",
+      "buildNumber": "3"
+    },
+    "android": {
+      "package": "oualpaif.corp",
+      "playStoreUrl": "",
+      "versionCode": 3
+    },
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "icon": "./src/assets/images/image-app-icon.png",
+    "splash": {
+      "image": "src/assets/images/image-splash.png",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": [
+      "src/assets/images/*",
+      "src/assets/fonts",
+      "src/layouts/**/assets/*"
+    ],
+    "androidStatusBar": {
+      "barStyle": "dark-content",
+      "backgroundColor": "#F7F9FC"
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
+  }
+}
