@@ -73,7 +73,7 @@ export class Message {
 
   static sure(): Message {
     return new Message(
-      'Oui bien sûr!',
+      'Avec grand plaisir!',
       '4:35 PM',
       false,
       null,

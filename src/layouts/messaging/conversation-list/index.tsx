@@ -16,9 +16,17 @@ export default ({ navigation }): React.ReactElement => {
   const styles = useStyleSheet(themedStyles);
   const [searchQuery, setSearchQuery] = React.useState<string>();
 
+  // Start affichage conditionnel pour personnaliser le message affiché en fonction du contact choisit :
   const onItemPress = (index: number): void => {
-    navigation && navigation.navigate('Chat1');
+    if(index == 1){
+      navigation && navigation.navigate('Chat3'); // Shirai Subary
+    }else if(index == 2){
+      navigation && navigation.navigate('Chat1'); // Kari Granleese
+    }else{
+      navigation && navigation.navigate('Chat2'); // Dushane Daniel
+    }
   };
+  // End affichage conditionnel pour personnaliser le message affiché en fonction du contact choisit.
 
   const renderItem = (info: ListRenderItemInfo<Message>): React.ReactElement => (
     <MessageItem

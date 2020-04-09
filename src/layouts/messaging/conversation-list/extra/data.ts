@@ -15,7 +15,7 @@ export class Message {
 
   static howAreYou(): Message {
     return new Message(
-      'Hey! How are you?',
+      'Oui bien sûr!',
       '4:30 PM',
       false,
       Profile.dushaneDaniel(),
@@ -24,7 +24,7 @@ export class Message {
 
   static canYouSend(): Message {
     return new Message(
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+      'Avec grand plaisir!',
       '4:12 PM',
       true,
       Profile.shiraiSubaru(),
@@ -33,7 +33,7 @@ export class Message {
 
   static noProblem(): Message {
     return new Message(
-      'No problem! It\'s fine',
+      'Aucun problème! C\'est bon',
       '12:00 PM',
       true,
       Profile.kariGranleese(),

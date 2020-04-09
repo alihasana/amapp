@@ -10,7 +10,7 @@ export class Message {
 
   static howAreYou(): Message {
     return new Message(
-      'Hello! How are you',
+      'Salut! Comment vas-tu',
       '4:00 PM',
       false,
       null,
@@ -19,7 +19,7 @@ export class Message {
 
   static imFine(): Message {
     return new Message(
-      'Hey! I’m fine. Thanks!  And you?',
+      'Salut! Je vais bien. Merci! Et toi?',
       '4:15 PM',
       true,
       null,
@@ -28,7 +28,7 @@ export class Message {
 
   static imFineToo(): Message {
     return new Message(
-      'I’m fine too! Thanks!',
+      'Je vais bien aussi! Merci!',
       '4:19 PM',
       false,
       null,
@@ -37,7 +37,7 @@ export class Message {
 
   static walkingWithDog(): Message {
     return new Message(
-      'I’m walking with my dog',
+      'Je marche avec mon chien',
       '4:20 PM',
       false,
       null,
@@ -46,7 +46,7 @@ export class Message {
 
   static imageAttachment1(): Message {
     return new Message(
-      'IMG_1357.JPG',
+      null,
       '4:25 PM',
       false,
       MessageAttachment.petPhoto1(),
@@ -55,7 +55,7 @@ export class Message {
 
   static imageAttachment2(): Message {
     return new Message(
-      'Video_347869.AVI',
+      null,
       '4:28 PM',
       false,
       MessageAttachment.petPhoto2(),
@@ -64,7 +64,7 @@ export class Message {
 
   static canIJoin(): Message {
     return new Message(
-      'Oh! He’s  so sweet! Can I join you and walk together?',
+      'Oh! Il est si doux! Puis-je vous rejoindre et marcher ensemble?',
       '4:30 PM',
       true,
       null,
@@ -73,7 +73,7 @@ export class Message {
 
   static sure(): Message {
     return new Message(
-      'Yes, sure!',
+      'Aucun problème C\'est bon!',
       '4:35 PM',
       false,
       null,
@@ -94,3 +94,4 @@ export class MessageAttachment {
     return new MessageAttachment(require('../assets/image-attachment-2.jpg'));
   }
 }
+
