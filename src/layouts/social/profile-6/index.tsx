@@ -43,7 +43,7 @@ export default ({ navigation }): React.ReactElement => {
   };
 
   const onMessageButtonPress = (): void => {
-    navigation && navigation.navigate('Chat1');
+    navigation && navigation.navigate('Chat2');
   };
 
   const renderPostItem = (info: ListRenderItemInfo<Post>): React.ReactElement => (

@@ -12,17 +12,17 @@ import {
   MenuItemType,
   Text,
 } from '@ui-kitten/components';
-import { BookIcon, GithubIcon } from '../../components/icons';
+import { BookIcon, GithubIcon, CloseIcon } from '../../components/icons';
 import { SafeAreaLayout } from '../../components/safe-area-layout.component';
 import { WebBrowserService } from '../../services/web-browser.service';
 import { AppInfoService } from '../../services/app-info.service';
 
 const DATA: MenuItemType[] = [
-  { title: 'Libraries', icon: GithubIcon },
-  { title: 'Documentation', icon: BookIcon },
+  { title: 'Déconnexion', icon: CloseIcon },
+  // { title: 'Documentation', icon: BookIcon },
 ];
 
-const version: string = AppInfoService.getVersion();
+// const version: string = AppInfoService.getVersion();
 
 export const HomeDrawer = ({ navigation }): DrawerElement => {
 
@@ -30,14 +30,14 @@ export const HomeDrawer = ({ navigation }): DrawerElement => {
     switch (index) {
       case 0: {
         navigation.toggleDrawer();
-        navigation.navigate('Libraries');
+        navigation.navigate('SignIn2'); // Simule une déconnexion en redirigant vers la page de connexion (à remplacer par la vrai fonction logout)
         return;
       }
-      case 1: {
-        WebBrowserService.openBrowserAsync('https://akveo.github.io/react-native-ui-kitten');
-        navigation.toggleDrawer();
-        return;
-      }
+      // case 1: {
+      //   WebBrowserService.openBrowserAsync('https://akveo.github.io/react-native-ui-kitten');
+      //   navigation.toggleDrawer();
+      //   return;
+      // }
     }
   };
 
@@ -59,15 +59,15 @@ export const HomeDrawer = ({ navigation }): DrawerElement => {
     </Layout>
   );
 
-  const renderFooter = (): DrawerHeaderFooterElement => (
-    <React.Fragment>
-      <Divider/>
-      <DrawerHeaderFooter
-        disabled={true}
-        description={`Version ${AppInfoService.getVersion()}`}
-      />
-    </React.Fragment>
-  );
+  // const renderFooter = (): DrawerHeaderFooterElement => (
+  //   <React.Fragment>
+  //     <Divider/>
+  //     <DrawerHeaderFooter
+  //       disabled={true}
+  //       description={`Version ${AppInfoService.getVersion()}`}
+  //     />
+  //   </React.Fragment>
+  // );
 
   return (
     <SafeAreaLayout
@@ -75,7 +75,7 @@ export const HomeDrawer = ({ navigation }): DrawerElement => {
       insets='top'>
       <Drawer
         header={renderHeader}
-        footer={renderFooter}
+        // footer={renderFooter}
         data={DATA}
         onSelect={onItemSelect}
       />

@@ -33,7 +33,7 @@ export const data: LayoutData[] = [
     },
   },
   {
-    title: 'Social',
+    title: 'Associations',
     route: 'Social',
     icon: (style: ImageStyle) => {
       return React.createElement(
@@ -42,18 +42,18 @@ export const data: LayoutData[] = [
       );
     },
   },
+  // {
+  //   title: 'Articles',
+  //   route: 'Articles',
+  //   icon: (style: ImageStyle) => {
+  //     return React.createElement(
+  //       ThemedIcon,
+  //       { ...style, light: AssetArticlesIcon, dark: AssetArticlesDarkIcon },
+  //     );
+  //   },
+  // },
   {
-    title: 'Articles',
-    route: 'Articles',
-    icon: (style: ImageStyle) => {
-      return React.createElement(
-        ThemedIcon,
-        { ...style, light: AssetArticlesIcon, dark: AssetArticlesDarkIcon },
-      );
-    },
-  },
-  {
-    title: 'Messaging',
+    title: 'Messagerie',
     route: 'Messaging',
     icon: (style: ImageStyle) => {
       return React.createElement(
@@ -63,7 +63,7 @@ export const data: LayoutData[] = [
     },
   },
   {
-    title: 'Dashboards',
+    title: 'Projets',
     route: 'Dashboards',
     icon: (style: ImageStyle) => {
       return React.createElement(
@@ -72,14 +72,14 @@ export const data: LayoutData[] = [
       );
     },
   },
-  {
-    title: 'Ecommerce',
-    route: 'Ecommerce',
-    icon: (style: ImageStyle) => {
-      return React.createElement(
-        ThemedIcon,
-        { ...style, light: AssetEcommerceIcon, dark: AssetEcommerceDarkIcon },
-      );
-    },
-  },
+  // {
+  //   title: 'Ecommerce',
+  //   route: 'Ecommerce',
+  //   icon: (style: ImageStyle) => {
+  //     return React.createElement(
+  //       ThemedIcon,
+  //       { ...style, light: AssetEcommerceIcon, dark: AssetEcommerceDarkIcon },
+  //     );
+  //   },
+  // },
 ];

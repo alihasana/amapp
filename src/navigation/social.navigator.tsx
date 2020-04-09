@@ -17,7 +17,7 @@ import { ProfileSettings1Screen } from '../scenes/social/profile-settings-1.comp
 import { ProfileSettings2Screen } from '../scenes/social/profile-settings-2.component';
 import { ProfileSettings3Screen } from '../scenes/social/profile-settings-3.component';
 
-import { Chat1Screen } from '../scenes/messaging/chat-1.component';
+import { Chat2Screen } from '../scenes/messaging/chat-2.component';
 
 const TopTab = createMaterialTopTabNavigator();
 const Stack = createStackNavigator();
@@ -45,6 +45,6 @@ export const SocialNavigator = (): React.ReactElement => (
     <Stack.Screen name='ProfileSettings2' component={ProfileSettings2Screen}/>
     <Stack.Screen name='ProfileSettings3' component={ProfileSettings3Screen}/>
 
-    <Stack.Screen name='Chat1' component={Chat1Screen}/>
+    <Stack.Screen name='Chat2' component={Chat2Screen}/>
   </Stack.Navigator>
 );
