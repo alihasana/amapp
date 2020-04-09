@@ -19,7 +19,7 @@ export const Trainings1Screen = ({ navigation }): React.ReactElement => {
       style={styles.container}
       insets='top'>
       <TopNavigation
-        title='Trainings'
+        title='Projet - répondre aux besoins des familles rurales'
         leftControl={renderBackAction()}
       />
       <ContentView/>

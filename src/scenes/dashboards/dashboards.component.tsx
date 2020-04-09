@@ -20,15 +20,15 @@ export const DashboardScreen = ({ navigation, state }): React.ReactElement => {
   return (
     <SafeAreaLayout insets='top'>
       <TopNavigation
-        title='Dashboards'
+        title='Projets'
         leftControl={renderBackAction()}
       />
-      <BrandTabBar
+      {/* <BrandTabBar
         selectedIndex={state.index}
         onSelect={onTabSelect}>
         <Tab icon={GridIcon}/>
         <Tab icon={ListIcon}/>
-      </BrandTabBar>
+      </BrandTabBar> */}
     </SafeAreaLayout>
   );
 };

@@ -6,8 +6,10 @@ export interface DashboardData extends LayoutItem {
 
 export const data: DashboardData[] = [
   {
-    title: 'Trainings',
-    description: 'Option 1',
+    title: 'Répondre aux besoins des familles rurales',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n' + 
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n' + 
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     image: require('../../assets/images/image-layout-training-1.jpg'),
     route: 'Trainings1',
   },

@@ -13,7 +13,7 @@ const Stack = createStackNavigator();
 
 const DashboardsMenuNavigator = (): React.ReactElement => (
   <TopTab.Navigator tabBar={(props) => <DashboardScreen {...props}/>}>
-    <TopTab.Screen name='DashboardGrid' component={DashboardGridScreen}/>
+    {/* <TopTab.Screen name='DashboardGrid' component={DashboardGridScreen}/> */}
     <TopTab.Screen name='DashboardList' component={DashboardsListScreen}/>
   </TopTab.Navigator>
 );
