@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import { Button, Input, Layout, StyleService, Text, useStyleSheet } from '@ui-kitten/components';
 import { EyeIcon, EyeOffIcon, PersonIcon } from './extra/icons';
 import { KeyboardAvoidingView } from './extra/3rd-party';
+// import { AppNavigator } from '../../../navigation/app.navigator';
 
 export default ({ navigation }): React.ReactElement => {
 
@@ -12,13 +13,19 @@ export default ({ navigation }): React.ReactElement => {
 
   const styles = useStyleSheet(themedStyles);
 
-  const onSignUpButtonPress = (): void => {
-    navigation && navigation.navigate('SignUp2');
-  };
+  // const onSignUpButtonPress = (): void => {
+  //   navigation && navigation.navigate('SignUp2');
+  // };
 
   const onForgotPasswordButtonPress = (): void => {
     navigation && navigation.navigate('ForgotPassword');
+  };  
+  
+  const appNavigatorButtonPress = (): void => {
+    navigation && navigation.navigate('AppNavigator');
   };
+
+
 
   const onPasswordIconPress = (): void => {
     setPasswordVisible(!passwordVisible);
@@ -30,27 +37,27 @@ export default ({ navigation }): React.ReactElement => {
         <Text
           category='h1'
           status='control'>
-          Hello
+          Association{' '}Manager
         </Text>
         <Text
           style={styles.signInLabel}
           category='s1'
           status='control'>
-          Sign in to your account
+          Connectez-vous à votre compte pour continuer...!
         </Text>
       </View>
       <Layout
         style={styles.formContainer}
         level='1'>
         <Input
-          placeholder='Email'
+          placeholder='Votre adresse email'
           icon={PersonIcon}
           value={email}
           onChangeText={setEmail}
         />
         <Input
           style={styles.passwordInput}
-          placeholder='Password'
+          placeholder='Votre mot de passe'
           icon={passwordVisible ? EyeIcon : EyeOffIcon}
           value={password}
           secureTextEntry={!passwordVisible}
@@ -63,22 +70,22 @@ export default ({ navigation }): React.ReactElement => {
             appearance='ghost'
             status='basic'
             onPress={onForgotPasswordButtonPress}>
-            Forgot your password?
+            Mot de passe oublié?
           </Button>
         </View>
       </Layout>
       <Button
         style={styles.signInButton}
-        size='giant'>
-        SIGN IN
+        size='giant' onPress={appNavigatorButtonPress}>
+        Se connecter
       </Button>
-      <Button
+      {/* <Button
         style={styles.signUpButton}
         appearance='ghost'
         status='basic'
         onPress={onSignUpButtonPress}>
-        Don't have an account? Create
-      </Button>
+        Inscription
+      </Button> */}
     </KeyboardAvoidingView>
   );
 };
@@ -102,12 +109,13 @@ const themedStyles = StyleService.create({
     marginTop: 16,
   },
   signInButton: {
-    marginHorizontal: 16,
-  },
-  signUpButton: {
     marginVertical: 12,
     marginHorizontal: 16,
   },
+  // signUpButton: {
+  //   marginVertical: 12,
+  //   marginHorizontal: 16,
+  // },
   forgotPasswordContainer: {
     flexDirection: 'row',
     justifyContent: 'flex-end',

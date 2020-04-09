@@ -6,7 +6,8 @@ import {
 } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { LayoutsNavigator } from './layouts.navigator';
-import { ComponentsNavigator } from './components.navigator';
+// import { ComponentsNavigator } from './components.navigator';
+import ContentView from '../layouts/dashboards/settings';
 import { ThemesNavigator } from './themes.navigator';
 import { HomeBottomNavigation } from '../scenes/home/home-bottom-navigation.component';
 import { HomeDrawer } from '../scenes/home/home-drawer.component';
@@ -19,12 +20,12 @@ const Drawer = createDrawerNavigator();
  * When dev is true in .expo/settings.json (started via `start:dev`),
  * open Components tab as default.
  */
-const initialTabRoute: string = __DEV__ ? 'Components' : 'Layouts';
+const initialTabRoute: string = __DEV__ ? 'Layouts' : 'Settings';
 
 /*
  * Can we access it from `HomeNavigator`?
  */
-const ROOT_ROUTES: string[] = ['Home', 'Layouts', 'Components', 'Themes'];
+const ROOT_ROUTES: string[] = ['Home', 'Layouts', 'Settings', 'Themes'];
 
 const isOneOfRootRoutes = (currentRoute: RouteProp<any, any>): boolean => {
   return ROOT_ROUTES.find(route => currentRoute.name === route) !== undefined;
@@ -41,7 +42,8 @@ const HomeTabsNavigator = (): React.ReactElement => (
     initialRouteName={initialTabRoute}
     tabBar={props => <HomeBottomNavigation {...props} />}>
     <BottomTab.Screen name='Layouts' component={LayoutsNavigator}/>
-    <BottomTab.Screen name='Components' component={ComponentsNavigator}/>
+    {/* <BottomTab.Screen name='Components' component={ComponentsNavigator}/> */}
+    <BottomTab.Screen name='Settings' component={ContentView}/>
     <BottomTab.Screen name='Themes' component={ThemesNavigator}/>
   </BottomTab.Navigator>
 );
