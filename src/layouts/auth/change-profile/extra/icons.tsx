@@ -14,3 +14,10 @@ export const PersonIcon = (style: ImageStyle): IconElement => (
   <Icon {...style} name='person'/>
 );
 
+export const PhoneIcon = (style: ImageStyle): IconElement => (
+  <Icon {...style} name='phone'/>
+);
+
+export const AddressIcon = (style: ImageStyle): IconElement => (
+  <Icon {...style} name='map'/>
+);

@@ -39,12 +39,12 @@ export default ({ navigation }): React.ReactElement => {
 
   const styles = useStyleSheet(themedStyle);
 
-  const onFollowButtonPress = (): void => {
-    navigation && navigation.goBack();
+  const onDashboardButtonPress = (): void => {
+    navigation && navigation.navigate('Dashboards');
   };
 
   const onMessageButtonPress = (): void => {
-    navigation && navigation.navigate('Chat1');
+    navigation && navigation.navigate('Chat2');
   };
 
   const renderFriendItem = (info: ListRenderItemInfo<Profile>): React.ReactElement => (
@@ -92,8 +92,8 @@ export default ({ navigation }): React.ReactElement => {
           <Button
             style={styles.profileButton}
             icon={PersonAddIcon}
-            onPress={onFollowButtonPress}>
-            FOLLOW
+            onPress={onDashboardButtonPress}>
+            PROJETS
           </Button>
           <Button
             style={styles.profileButton}

@@ -4,11 +4,7 @@ import { SafeAreaLayout } from '../../components/safe-area-layout.component';
 import { BrandTabBar } from '../../components/brand-tab-bar.component';
 import { ArrowIosBackIcon, GridIcon, ListIcon } from '../../components/icons';
 
-export const DashboardScreen = ({ navigation, state }): React.ReactElement => {
-
-  const onTabSelect = (index: number): void => {
-    navigation.navigate(state.routeNames[index]);
-  };
+export const DashboardScreen = ({ navigation }): React.ReactElement => {
 
   const renderBackAction = (): React.ReactElement => (
     <TopNavigationAction
@@ -20,15 +16,9 @@ export const DashboardScreen = ({ navigation, state }): React.ReactElement => {
   return (
     <SafeAreaLayout insets='top'>
       <TopNavigation
-        title='Dashboards'
+        title='Projets'
         leftControl={renderBackAction()}
       />
-      <BrandTabBar
-        selectedIndex={state.index}
-        onSelect={onTabSelect}>
-        <Tab icon={GridIcon}/>
-        <Tab icon={ListIcon}/>
-      </BrandTabBar>
     </SafeAreaLayout>
   );
 };

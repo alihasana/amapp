@@ -1,56 +1,75 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Avatar, Button, Input, Layout, StyleService, Text, useStyleSheet } from '@ui-kitten/components';
-import { EyeIcon, EyeOffIcon, PersonIcon } from './extra/icons';
+import { Button, Input, Layout, StyleService, Text, useStyleSheet } from '@ui-kitten/components';
+import { PersonIcon, PhoneIcon, AddressIcon } from './extra/icons';
 import { KeyboardAvoidingView } from './extra/3rd-party';
 
 export default ({ navigation }): React.ReactElement => {
 
-  const [email, setEmail] = React.useState<string>();
+  // const [email, setEmail] = React.useState<string>();
 
-  const styles = useStyleSheet(themedStyles); 
+  const styles = useStyleSheet(themedStyles);  
   
   const onResetPasswordButtonPress = (): void => {
     navigation && navigation.goBack();
   };
 
-  const onPasswordIconPress = (): void => {
-    setPasswordVisible(!passwordVisible);
-  };
-
   return (
     <KeyboardAvoidingView style={styles.container}>
       <View style={styles.headerContainer}>
-        <Avatar
-          size='giant'
-          source={require('../../../assets/images/image-app-icon.png')}
-        />
-        <Text
-          category='h1'
-          status='control'>
-          Association{' '}Manager
-        </Text>
         <Text
           style={styles.signInLabel}
           category='s1'
           status='control'>
-          Mot de passe{' '}oublié...!
+          Modification de mon profil...!
         </Text>
       </View>
       <Layout
         style={styles.formContainer}
         level='1'>
+          <View>
+            <Text>
+              Nesly{' '}PETIT{' '}BERT
+            </Text>
+          </View>
+          <View>
+            <Text>
+              {' '}
+            </Text>
+            <Text>
+              Date d'inscription : 11 mars 2020
+            </Text>
+          </View>
+          <View>
+            <Text>
+                {' '}
+            </Text>
+          </View>
+          <Input
+            icon={PersonIcon}
+            placeholder='Adresse email'
+            value='petitbert.nesly@gmail.com'
+          />
+          <Input
+            icon={PhoneIcon}
+            placeholder='Téléphone'
+            value='+33789658978'
+          />
         <Input
-          placeholder='Votre adresse email'
-          icon={PersonIcon}
-          value={email}
-          onChangeText={setEmail}
+          icon={AddressIcon}
+          placeholder='Adresse 1'
+          value="12 rue de l'ancienne gare militaire"
+        />
+        <Input
+          icon={AddressIcon}
+          placeholder='Adresse 2'
+          value="91120 Palaiseau"
         />
       </Layout>
       <Button
         style={styles.signInButton}
         size='giant' onPress={onResetPasswordButtonPress}>
-        Réinitialiser mon{' '}mot{' '}de{' '}passe
+        Enregistrer les modifications
       </Button>
     </KeyboardAvoidingView>
   );

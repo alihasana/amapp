@@ -3,34 +3,35 @@ import { ImageBackground, ListRenderItemInfo, StyleSheet, View } from 'react-nat
 import { Avatar, Button, Card, Layout, List, Text } from '@ui-kitten/components';
 import { ProfileSocial } from './extra/profile-social.component';
 import { HeartIcon } from './extra/icons';
-import { Post, Profile } from './extra/data';
+import { Association, Profile } from './extra/data';
 
-const profile: Profile = Profile.jenniferGreen();
+const profile: Profile = Profile.humanis();
 
-const posts: Post[] = [
-  Post.byJenniferGreen(),
-  Post.byAlexaTenorio(),
+const posts: Association[] = [
+  Association.byHumanis(),
+  Association.byRestoDuCoeur(),
+  Association.byCroixRouge(),
 ];
 
 export default ({ navigation }): React.ReactElement => {
 
-  const onFollowButtonPress = (): void => {
-    navigation && navigation.goBack();
+  const appAssociationButtonPress = (): void => {
+    navigation && navigation.navigate('Profile7');
   };
 
-  const renderItemHeader = (info: ListRenderItemInfo<Post>): React.ReactElement => (
+  const renderItemHeader = (info: ListRenderItemInfo<Association>): React.ReactElement => (
     <ImageBackground
       style={styles.postHeader}
       source={info.item.image}
     />
   );
 
-  const renderItem = (info: ListRenderItemInfo<Post>): React.ReactElement => (
+  const renderItem = (info: ListRenderItemInfo<Association>): React.ReactElement => (
     <Card
       style={styles.post}
-      header={() => renderItemHeader(info)}>
+      header={() => renderItemHeader(info)}
+      onPress={appAssociationButtonPress}>
       <View style={styles.postBody}>
-        <Avatar source={info.item.author.photo}/>
         <View style={styles.postAuthorContainer}>
           <Text
             category='s2'>
@@ -39,62 +40,11 @@ export default ({ navigation }): React.ReactElement => {
           <Text
             appearance='hint'
             category='c1'>
-            {info.item.date}
+            inscrit le {info.item.date}
           </Text>
         </View>
-        <Button
-          style={styles.iconButton}
-          appearance='ghost'
-          status='danger'
-          icon={HeartIcon}>
-          {`${info.item.likes.length}`}
-        </Button>
       </View>
     </Card>
-  );
-
-  const renderHeader = (): React.ReactElement => (
-    <Layout
-      style={styles.header}
-      level='1'>
-      <Avatar
-        style={styles.profileAvatar}
-        size='large'
-        source={profile.photo}
-      />
-      <View style={styles.profileDetailsContainer}>
-        <Text category='h4'>
-          {profile.fullName}
-        </Text>
-        <Text
-          appearance='hint'
-          category='s1'>
-          {profile.location}
-        </Text>
-        <View style={styles.profileSocialsContainer}>
-          <ProfileSocial
-            style={styles.profileSocialContainer}
-            hint='Followers'
-            value={`${profile.followers}`}
-          />
-          <ProfileSocial
-            style={styles.profileSocialContainer}
-            hint='Following'
-            value={`${profile.following}`}
-          />
-          <ProfileSocial
-            style={styles.profileSocialContainer}
-            hint='Posts'
-            value={`${profile.posts}`}
-          />
-        </View>
-        <Button
-          style={styles.followButton}
-          onPress={onFollowButtonPress}>
-          FOLLOW
-        </Button>
-      </View>
-    </Layout>
   );
 
   return (
@@ -103,7 +53,6 @@ export default ({ navigation }): React.ReactElement => {
       contentContainerStyle={styles.listContent}
       data={posts}
       renderItem={renderItem}
-      ListHeaderComponent={renderHeader}
     />
   );
 };

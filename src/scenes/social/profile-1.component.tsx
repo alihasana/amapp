@@ -19,7 +19,7 @@ export const Profile1Screen = ({ navigation }): React.ReactElement => {
       style={styles.container}
       insets='top'>
       <TopNavigation
-        title='Profile'
+        title='Liste des associations'
         leftControl={renderBackAction()}
       />
       <Divider/>
