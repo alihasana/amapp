@@ -3,85 +3,65 @@ import { ImageSourcePropType } from 'react-native';
 export class Profile {
 
   constructor(readonly firstName: string,
-              readonly lastName: string,
-              readonly photo: ImageSourcePropType,
-              readonly location: string,
-              readonly followers: number,
-              readonly following: number,
-              readonly posts: number) {
+              readonly lastName: string) {
   }
 
   get fullName(): string {
     return `${this.firstName} ${this.lastName}`;
   }
 
-  static jenniferGreen(): Profile {
+  static restoDuCoeur(): Profile {
     return new Profile(
-      'Jennifer',
-      'Green',
-      require('../assets/image-profile-1.jpg'),
-      'Berlin, Germany',
-      1500,
-      700,
-      86,
+      'Resto',
+      'Du Coeur'
     );
   }
 
-  static alexaTenorio(): Profile {
+  static humanis(): Profile {
     return new Profile(
-      'Alexa',
-      'Tenorio',
-      require('../assets/image-profile-2.jpg'),
-      'Tokyo, Japan',
-      2500,
-      172,
-      32,
+      'Humanis',
+      ''
+    );
+  }
+
+  static croixRouge(): Profile {
+    return new Profile(
+      'Croix Rouge',
+      'Française'
     );
   }
 }
 
-export class Post {
+export class Association {
 
   constructor(readonly image: ImageSourcePropType,
               readonly author: Profile,
-              readonly date: string,
-              readonly likes: Like[]) {
+              readonly date: string) {
   }
 
-  static byAlexaTenorio(): Post {
-    return new Post(
-      require('../assets/image-post-1.jpg'),
-      Profile.alexaTenorio(),
-      'Today 12:35 pm',
-      [
-        Like.byAlexaTenorio(),
-        Like.byJenniferGreen(),
-      ],
+  static byHumanis(): Association {
+    return new Association(
+      require('../assets/image-asso-1.jpg'),
+      Profile.humanis(),
+      '30/12/2019 14:50'
     );
   }
 
-  static byJenniferGreen(): Post {
-    return new Post(
-      require('../assets/image-post-2.jpg'),
-      Profile.jenniferGreen(),
-      'Today 12:35 pm',
-      [
-        Like.byAlexaTenorio(),
-      ],
+  static byRestoDuCoeur(): Association {
+    return new Association(
+      require('../assets/image-asso-2.jpg'),
+      Profile.restoDuCoeur(),
+      '25/02/2020 18:35'
     );
   }
+
+  static byCroixRouge(): Association {
+    return new Association(
+      require('../assets/image-asso-3.jpg'),
+      Profile.croixRouge(),
+      '01/01/2020 17:24'
+    );
+  }
+
 }
 
-export class Like {
-
-  constructor(readonly author: Profile) {
-  }
-
-  static byAlexaTenorio(): Like {
-    return new Like(Profile.alexaTenorio());
-  }
-
-  static byJenniferGreen(): Like {
-    return new Like(Profile.jenniferGreen());
-  }
-}

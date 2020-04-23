@@ -1,9 +1,9 @@
 import { ImageSourcePropType } from 'react-native';
 
 export enum TrainingLevel {
-  EASY = 'Easy',
-  MIDDLE = 'Middle',
-  HARD = 'Hard',
+  TO_DO = 'A faire',
+  IN_PROGRESS = 'En cours',
+  COMPLETED = 'Terminée',
 }
 
 export class Training {
@@ -15,90 +15,90 @@ export class Training {
   }
 
   get formattedLevel(): string {
-    return `${this.level} Level`;
+    return `${this.level} Test`;
   }
 
   get formattedDuration(): string {
     return `${this.duration} min`;
   }
 
-  static chestEasy(): Training {
+  static chestToDo(): Training {
     return new Training(
       'Chest',
       55,
-      TrainingLevel.EASY,
+      TrainingLevel.TO_DO,
       require('../assets/image-training-1.jpg'),
     );
   }
 
-  static workoutEasy(): Training {
+  static workoutToDo(): Training {
     return new Training(
       'Chest',
       55,
-      TrainingLevel.EASY,
+      TrainingLevel.TO_DO,
       require('../assets/image-training-2.jpg'),
     );
   }
 
-  static personalizedEasy(): Training {
+  static personalizedToDo(): Training {
     return new Training(
       'Personalized Training',
       55,
-      TrainingLevel.EASY,
+      TrainingLevel.TO_DO,
       require('../assets/image-training-3.jpg'),
     );
   }
 
-  static chestMiddle(): Training {
+  static chestInProgress(): Training {
     return new Training(
       'Chest',
       55,
-      TrainingLevel.MIDDLE,
+      TrainingLevel.IN_PROGRESS,
       require('../assets/image-training-4.jpg'),
     );
   }
 
-  static bicepsMiddle(): Training {
+  static bicepsInProgress(): Training {
     return new Training(
       'Biceps',
       55,
-      TrainingLevel.MIDDLE,
+      TrainingLevel.IN_PROGRESS,
       require('../assets/image-training-5.jpg'),
     );
   }
 
-  static personalizedMiddle(): Training {
+  static personalizedInProgress(): Training {
     return new Training(
       'Personalized Training',
       55,
-      TrainingLevel.MIDDLE,
+      TrainingLevel.IN_PROGRESS,
       require('../assets/image-training-1.jpg'),
     );
   }
 
-  static chestHard(): Training {
+  static chestCompleted(): Training {
     return new Training(
       'Chest',
       55,
-      TrainingLevel.HARD,
+      TrainingLevel.COMPLETED,
       require('../assets/image-training-2.jpg'),
     );
   }
 
-  static bicepsHard(): Training {
+  static bicepsCompleted(): Training {
     return new Training(
       'Biceps',
       55,
-      TrainingLevel.HARD,
+      TrainingLevel.COMPLETED,
       require('../assets/image-training-3.jpg'),
     );
   }
 
-  static workoutHard(): Training {
+  static workoutCompleted(): Training {
     return new Training(
       'Workout',
       55,
-      TrainingLevel.HARD,
+      TrainingLevel.COMPLETED,
       require('../assets/image-training-4.jpg'),
     );
   }

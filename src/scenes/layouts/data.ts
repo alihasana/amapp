@@ -2,16 +2,8 @@ import React from 'react';
 import { ImageStyle } from 'react-native';
 import { ThemedIcon } from '../../components/themed-icon.component';
 import {
-  AssetArticlesDarkIcon,
-  AssetArticlesIcon,
   AssetAuthDarkIcon,
   AssetAuthIcon,
-  AssetDashboardsDarkIcon,
-  AssetDashboardsIcon,
-  AssetEcommerceDarkIcon,
-  AssetEcommerceIcon,
-  AssetMessagingDarkIcon,
-  AssetMessagingIcon,
   AssetSocialDarkIcon,
   AssetSocialIcon,
 } from '../../components/icons';
@@ -23,8 +15,8 @@ export interface LayoutData extends MenuItem {
 
 export const data: LayoutData[] = [
   {
-    title: 'Auth',
-    route: 'Auth',
+    title: 'Profil',
+    route: 'Profile',
     icon: (style: ImageStyle) => {
       return React.createElement(
         ThemedIcon,
@@ -33,52 +25,12 @@ export const data: LayoutData[] = [
     },
   },
   {
-    title: 'Social',
+    title: 'Associations',
     route: 'Social',
     icon: (style: ImageStyle) => {
       return React.createElement(
         ThemedIcon,
         { ...style, light: AssetSocialIcon, dark: AssetSocialDarkIcon },
-      );
-    },
-  },
-  {
-    title: 'Articles',
-    route: 'Articles',
-    icon: (style: ImageStyle) => {
-      return React.createElement(
-        ThemedIcon,
-        { ...style, light: AssetArticlesIcon, dark: AssetArticlesDarkIcon },
-      );
-    },
-  },
-  {
-    title: 'Messaging',
-    route: 'Messaging',
-    icon: (style: ImageStyle) => {
-      return React.createElement(
-        ThemedIcon,
-        { ...style, light: AssetMessagingIcon, dark: AssetMessagingDarkIcon },
-      );
-    },
-  },
-  {
-    title: 'Dashboards',
-    route: 'Dashboards',
-    icon: (style: ImageStyle) => {
-      return React.createElement(
-        ThemedIcon,
-        { ...style, light: AssetDashboardsIcon, dark: AssetDashboardsDarkIcon },
-      );
-    },
-  },
-  {
-    title: 'Ecommerce',
-    route: 'Ecommerce',
-    icon: (style: ImageStyle) => {
-      return React.createElement(
-        ThemedIcon,
-        { ...style, light: AssetEcommerceIcon, dark: AssetEcommerceDarkIcon },
       );
     },
   },

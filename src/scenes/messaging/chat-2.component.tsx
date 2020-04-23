@@ -37,8 +37,8 @@ export const Chat2Screen = ({ navigation }): React.ReactElement => {
       style={styles.container}
       insets='top'>
       <TopNavigation
-        title='Helen Kuper'
-        subtitle='Last seen just now'
+        title='Dushane Daniel'
+        subtitle='Vu pour la dernière fois Sam 20 jan 2020 à 20h30'
         leftControl={renderBackAction()}
         rightControls={[renderProfileAction()]}
       />

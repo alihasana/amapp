@@ -5,15 +5,15 @@ import { TrainingCard } from './extra/training-card.component';
 import { Training } from './extra/data';
 
 const trainings: Training[] = [
-  Training.chestEasy(),
-  Training.workoutEasy(),
-  Training.personalizedEasy(),
-  Training.bicepsMiddle(),
-  Training.chestMiddle(),
-  Training.personalizedMiddle(),
-  Training.bicepsHard(),
-  Training.workoutHard(),
-  Training.chestHard(),
+  Training.chestToDo(),
+  Training.workoutToDo(),
+  Training.personalizedToDo(),
+  Training.bicepsInProgress(),
+  Training.chestInProgress(),
+  Training.personalizedInProgress(),
+  Training.bicepsCompleted(),
+  Training.workoutCompleted(),
+  Training.chestCompleted(),
 ];
 
 export const TrainingsListScreen = ({ route }): React.ReactElement => {
@@ -25,7 +25,7 @@ export const TrainingsListScreen = ({ route }): React.ReactElement => {
       <Text
         style={styles.headerTitle}
         appearance='hint'>
-        MOST POPULAR
+        Tâches
       </Text>
       <List
         contentContainerStyle={styles.horizontalList}

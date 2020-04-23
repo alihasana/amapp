@@ -12,17 +12,14 @@ import {
   MenuItemType,
   Text,
 } from '@ui-kitten/components';
-import { BookIcon, GithubIcon } from '../../components/icons';
+import { BookIcon, GithubIcon, CloseIcon } from '../../components/icons';
 import { SafeAreaLayout } from '../../components/safe-area-layout.component';
 import { WebBrowserService } from '../../services/web-browser.service';
 import { AppInfoService } from '../../services/app-info.service';
 
 const DATA: MenuItemType[] = [
-  { title: 'Libraries', icon: GithubIcon },
-  { title: 'Documentation', icon: BookIcon },
+  { title: 'Déconnexion', icon: CloseIcon },
 ];
-
-const version: string = AppInfoService.getVersion();
 
 export const HomeDrawer = ({ navigation }): DrawerElement => {
 
@@ -30,12 +27,7 @@ export const HomeDrawer = ({ navigation }): DrawerElement => {
     switch (index) {
       case 0: {
         navigation.toggleDrawer();
-        navigation.navigate('Libraries');
-        return;
-      }
-      case 1: {
-        WebBrowserService.openBrowserAsync('https://akveo.github.io/react-native-ui-kitten');
-        navigation.toggleDrawer();
+        navigation.navigate('SignIn2');
         return;
       }
     }
@@ -59,23 +51,12 @@ export const HomeDrawer = ({ navigation }): DrawerElement => {
     </Layout>
   );
 
-  const renderFooter = (): DrawerHeaderFooterElement => (
-    <React.Fragment>
-      <Divider/>
-      <DrawerHeaderFooter
-        disabled={true}
-        description={`Version ${AppInfoService.getVersion()}`}
-      />
-    </React.Fragment>
-  );
-
   return (
     <SafeAreaLayout
       style={styles.safeArea}
       insets='top'>
       <Drawer
         header={renderHeader}
-        footer={renderFooter}
         data={DATA}
         onSelect={onItemSelect}
       />
