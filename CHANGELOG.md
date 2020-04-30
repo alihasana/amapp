@@ -119,7 +119,7 @@ Upgrade application structure
 * feat(messaging): messages list add (#93) 684dd51, closes #93
 * feat(theme): create app theme 79a2d47
 * feat(theme): theme switch feature add 4ca28e8
-* feat(trainings): trainings layout add (#94) cc26dee, closes #94
+* feat(ProjectTasks): ProjectTasks layout add (#94) cc26dee, closes #94
 * build(common): add prod/dev build configurations b0e0b34
 * build(common): bump react-native-ui-kitten version 8cc0a6d
 * build(common): Link to react-native-ui-kitten/dev c971bbf
