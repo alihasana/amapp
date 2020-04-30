@@ -1,0 +1,145 @@
+{ "projectTasks" : [{
+    "title" : "Chest",
+    "duration" : 55,
+    "description" : "description",
+      "level" :{
+        "TO_DO": "A faire",
+        "IN_PROGRESS": "En cours",
+        "COMPLETED": "Terminée"
+      },
+      "image" : "uri('https://cdn.pixabay.com/photo/2020/02/11/11/53/poppies-4839317_960_720.jpg')"
+},
+
+   { 
+    "title": "Chest",
+    "duration" : 55,
+    "description" : "description",
+      "level" :{
+        "TO_DO": "A faire",
+        "IN_PROGRESS": "En cours",
+        "COMPLETED": "Terminée"
+      },
+      "image" : "uri('https://cdn.pixabay.com/photo/2020/02/11/11/53/poppies-4839317_960_720.jpg')" 
+},
+
+   {
+    "title": "Personalized ProjectTask",
+    "duration" : 55,
+    "description" : "description",
+      "level" :{
+        "TO_DO": "A faire",
+        "IN_PROGRESS": "En cours",
+        "COMPLETED": "Terminée"
+      },
+      "image" : "uri('https://cdn.pixabay.com/photo/2020/02/11/11/53/poppies-4839317_960_720.jpg')"
+},
+
+
+  {
+    "title": "Chest",
+    "duration" : 55,
+    "description" : "description",
+      "level" :{
+        "TO_DO": "A faire",
+        "IN_PROGRESS": "En cours",
+        "COMPLETED": "Terminée"
+      },
+      "image" : "uri('https://cdn.pixabay.com/photo/2020/02/11/11/53/poppies-4839317_960_720.jpg')" 
+},
+
+   {   
+    "title": "Chest",
+    "duration" : 55,
+    "description" : "description",
+      "level" :{
+        "TO_DO": "A faire",
+        "IN_PROGRESS": "En cours",
+        "COMPLETED": "Terminée"
+      },
+      "image" : "uri('https://cdn.pixabay.com/photo/2020/02/11/11/53/poppies-4839317_960_720.jpg')"  
+},
+
+   {   
+    "title": "Personalized ProjectTask",
+    "duration" : 55,
+    "description" : "description",
+      "level" :{
+        "TO_DO": "A faire",
+        "IN_PROGRESS": "En cours",
+        "COMPLETED": "Terminée"
+      },
+      "image" : "uri('https://cdn.pixabay.com/photo/2020/02/11/11/53/poppies-4839317_960_720.jpg')"  
+},
+
+
+   {    
+    "title": "Chest",
+    "duration" : 55,
+    "description" : "description",
+      "level" :{
+        "TO_DO": "A faire",
+        "IN_PROGRESS": "En cours",
+        "COMPLETED": "Terminée"
+      },
+      "image" : "uri('https://cdn.pixabay.com/photo/2020/02/11/11/53/poppies-4839317_960_720.jpg')"   
+},
+
+   {    
+    "title": "Biceps",
+    "duration" : 55,
+    "description" : "description",
+      "level" :{
+        "TO_DO": "A faire",
+        "IN_PROGRESS": "En cours",
+        "COMPLETED": "Terminée"
+      },
+      "image" : "uri('https://cdn.pixabay.com/photo/2020/02/11/11/53/poppies-4839317_960_720.jpg')"   
+},
+
+   {  
+    "title": "Personalized ProjectTask",
+    "duration" : 55,
+    "description" : "description",
+      "level" :{
+        "TO_DO": "A faire",
+        "IN_PROGRESS": "En cours",
+        "COMPLETED": "Terminée"
+      },
+      "image" : "uri('https://cdn.pixabay.com/photo/2020/02/11/11/53/poppies-4839317_960_720.jpg')"  
+},
+
+   {
+    "title": "Chest",
+    "duration" : 55,
+    "description" : "description",
+      "level" :{
+        "TO_DO": "A faire",
+        "IN_PROGRESS": "En cours",
+        "COMPLETED": "Terminée"
+      },
+      "image" : "uri('https://cdn.pixabay.com/photo/2020/02/11/11/53/poppies-4839317_960_720.jpg')"
+},
+
+   {
+    "title": "Biceps",
+    "duration" : 55,
+    "description" : "description",
+      "level" :{
+        "TO_DO": "A faire",
+        "IN_PROGRESS": "En cours",
+        "COMPLETED": "Terminée"
+      },
+      "image" : "uri('https://cdn.pixabay.com/photo/2020/02/11/11/53/poppies-4839317_960_720.jpg')"
+},
+
+   {
+    "title": "Workout",
+    "duration" : 55,
+    "description" : "description",
+      "level" :{
+        "TO_DO": "A faire",
+        "IN_PROGRESS": "En cours",
+        "COMPLETED": "Terminée"
+      },
+      "image" : "uri('https://cdn.pixabay.com/photo/2020/02/11/11/53/poppies-4839317_960_720.jpg')"
+}]}
