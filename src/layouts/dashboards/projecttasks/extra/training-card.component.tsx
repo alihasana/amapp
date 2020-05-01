@@ -17,11 +17,10 @@ export const ProjectTaskCard = (props: ProjectTaskCardProps): CardElement => {
 
 
   const onCardPress = (): void => {
-    if (projectTask.getLevel === 'A faire') {
-      projectTask.setLevel = 'En cours';
-    }
-    if (projectTask.getLevel === 'En cours') {
-      projectTask.setLevel = 'Terminée';
+    if (this.projectTask.getLevel === 'A faire') {
+      this.projectTask.setLevel = 'En cours';
+    } else if (this.projectTask.getLevel === 'En cours') {
+      this.projectTask.setLevel = 'Terminée';
     }
   };
 
@@ -46,6 +45,7 @@ export const ProjectTaskCard = (props: ProjectTaskCardProps): CardElement => {
           {projectTask.title}
         </Text>
         <Text
+          style={styles.title}
           category='h6'>
           {projectTask.description}
         </Text>

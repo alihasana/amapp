@@ -167,7 +167,7 @@ static projectTaskList(dataJson): ProjectTask[] {
     projecttask.duration,
     projecttask.description,
     projecttask.level,
-    require('../assets/image-training-4.jpg'),
+    {uri: image},
  ); },
 );
 

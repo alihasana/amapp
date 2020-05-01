@@ -21,12 +21,10 @@ import dataJson from './extra/data.json';
 // ];
 
 const ProjectTasks: ProjectTask[] = ProjectTask.projectTaskList(dataJson);
-// console.log('Test --------------Old:\n ' + JSON.stringify(ProjectTasksOld));
-console.log('Test --------------New:\n ' + JSON.stringify(ProjectTasks));
 
 export const ProjectTasksListScreen = ({ route }): React.ReactElement => {
 
-  const displayProjectTasks: ProjectTask[] = ProjectTasks.filter(projectTask => projectTask.level === route.name);
+  const displayProjectTasks: ProjectTask[] = ProjectTasks.filter(projectTask => projectTask.getLevel === route.name);
   const renderHeader = (): React.ReactElement => (
     <React.Fragment>
       <Text
