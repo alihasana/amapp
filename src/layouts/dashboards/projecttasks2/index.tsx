@@ -4,7 +4,7 @@ import { Button, Card, List, Text } from '@ui-kitten/components';
 import { ActivityIcon, ClockIcon } from './extra/icons';
 import { ProjectTask } from './extra/data';
 
-const ProjectTasks: ProjectTask[] = [
+const projectTasks: ProjectTask[] = [
   ProjectTask.workoutForWomen(),
   ProjectTask.groupWorkout(),
   ProjectTask.gymnastics(),
@@ -50,7 +50,7 @@ export default (): React.ReactElement => {
   return (
     <List
       style={styles.list}
-      data={ProjectTasks}
+      data={projectTasks}
       renderItem={renderItem}
     />
   );

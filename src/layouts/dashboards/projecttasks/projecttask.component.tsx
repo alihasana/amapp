@@ -3,10 +3,9 @@ import { ListRenderItemInfo, StyleSheet } from 'react-native';
 import { List, Text } from '@ui-kitten/components';
 import { ProjectTaskCard } from './extra/training-card.component';
 import { ProjectTask } from './extra/data';
+import dataJson from './extra/data.json';
 
-// import DataJson from './extra/data.json';
-
-// const ProjectTasks: ProjectTask[] = [
+// const ProjectTasksOld: ProjectTask[] = [
 //   ProjectTask.chestToDo(),
 //   ProjectTask.workoutToDo(),
 //   ProjectTask.personalizedToDo(),
@@ -21,12 +20,13 @@ import { ProjectTask } from './extra/data';
 //   ProjectTask.chestCompleted(),
 // ];
 
-const ProjectTasks: ProjectTask[] = ProjectTask.projectTaskList();
-console.log("Test -------------- "+JSON.stringify(ProjectTasks));
+const ProjectTasks: ProjectTask[] = ProjectTask.projectTaskList(dataJson);
+// console.log('Test --------------Old:\n ' + JSON.stringify(ProjectTasksOld));
+console.log('Test --------------New:\n ' + JSON.stringify(ProjectTasks));
+
 export const ProjectTasksListScreen = ({ route }): React.ReactElement => {
 
-  const displayProjectTasks: ProjectTask[] = ProjectTasks.filter(ProjectTask => ProjectTask.level === route.name);
-
+  const displayProjectTasks: ProjectTask[] = ProjectTasks.filter(projectTask => projectTask.level === route.name);
   const renderHeader = (): React.ReactElement => (
     <React.Fragment>
       <Text
@@ -48,7 +48,7 @@ export const ProjectTasksListScreen = ({ route }): React.ReactElement => {
   const renderVerticalProjectTaskItem = (info: ListRenderItemInfo<ProjectTask>): React.ReactElement => (
     <ProjectTaskCard
       style={styles.verticalItem}
-      ProjectTask={info.item}
+      projectTask={info.item}
     />
   );
 

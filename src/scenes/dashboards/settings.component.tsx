@@ -23,7 +23,7 @@ export const SettingsScreen = ({ navigation }): React.ReactElement => {
         leftControl={renderBackAction()}
       />
       <Divider/>
-      <ContentView/>
+      <ContentView navigation={navigation}/>
     </SafeAreaLayout>
   );
 };

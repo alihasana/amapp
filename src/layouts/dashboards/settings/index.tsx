@@ -11,11 +11,11 @@ export default ({ navigation }): React.ReactElement => {
 
   const onChangePasswordButtonPress = (): void => {
     navigation && navigation.navigate('ChangePassword');
-  };  
+  };
 
   const onChangeProfileButtonPress = (): void => {
     navigation && navigation.navigate('ChangeProfile');
-  }; 
+  };
 
   const renderBackAction = (): React.ReactElement => (
     <TopNavigationAction
@@ -44,12 +44,12 @@ export default ({ navigation }): React.ReactElement => {
               style={styles.signInLabel}
               category='s1'
               status='control'>
-              <span style={{color: '#000', fontWeight:'bold'}}>Nom : </span>Nesly{' '}PETIT{' '}BERT{"\n"}
-              <span style={{color: '#000', fontWeight:'bold'}}>Inscris le : </span>11 mars 2020{"\n"}
-              <span style={{color: '#000', fontWeight:'bold'}}>Téléphone de contact : </span>+33789658978{"\n"}
-              <span style={{color: '#000', fontWeight:'bold'}}>E-mail : </span>petitbert.nesly@gmail.com{"\n"}{"\n"}
-              <span style={{color: '#000', fontWeight:'bold'}}>Adresse : </span>{"\n"}
-              12 rue de l'ancienne gare militaire{"\n"}
+              <span style={{color: '#000', fontWeight: 'bold'}}>Nom : </span>Nesly{' '}PETIT{' '}BERT{'\n'}
+              <span style={{color: '#000', fontWeight: 'bold'}}>Inscris le : </span>11 mars 2020{'\n'}
+              <span style={{color: '#000', fontWeight: 'bold'}}>Téléphone de contact : </span>+33789658978{'\n'}
+              <span style={{color: '#000', fontWeight: 'bold'}}>E-mail : </span>petitbert.nesly@gmail.com{'\n'}{'\n'}
+              <span style={{color: '#000', fontWeight: 'bold'}}>Adresse : </span>{'\n'}
+              12 rue de l'ancienne gare militaire{'\n'}
               91120 Palaiseau
             </Text>
             <Text>

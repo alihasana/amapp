@@ -3,6 +3,7 @@ import { ImageSourcePropType } from 'react-native';
 export class ProjectTask {
 
   constructor(readonly title: string,
+              readonly description: string,
               readonly duration: number,
               readonly kcal: number,
               readonly image: ImageSourcePropType) {
@@ -22,6 +23,7 @@ export class ProjectTask {
   static workoutForWomen(): ProjectTask {
     return new ProjectTask(
       'Workout For Women',
+      'description',
       30,
       150,
       require('../assets/image-training-1.jpg'),
@@ -31,6 +33,7 @@ export class ProjectTask {
   static groupWorkout(): ProjectTask {
     return new ProjectTask(
       'Group Workout',
+      'description',
       110,
       150,
       require('../assets/image-training-3.jpg'),
@@ -40,9 +43,10 @@ export class ProjectTask {
   static gymnastics(): ProjectTask {
     return new ProjectTask(
       'Gymnastics',
+      'description',
       30,
       100,
       require('../assets/image-training-2.jpg'),
     );
-  } 
+  }
 }

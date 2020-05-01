@@ -6,39 +6,54 @@ import { ClockIcon } from './icons';
 import { ProjectTask } from './data';
 
 export interface ProjectTaskCardProps extends Omit<CardProps, 'children'> {
-  ProjectTask: ProjectTask;
+  projectTask: ProjectTask;
 }
 
 export type ProjectTaskCardElement = React.ReactElement<ProjectTaskCardProps>;
 
 export const ProjectTaskCard = (props: ProjectTaskCardProps): CardElement => {
 
-  const { style, ProjectTask, ...cardProps } = props;
+  const { style, projectTask, ...cardProps } = props;
+
+
+  const onCardPress = (): void => {
+    if (projectTask.getLevel === 'A faire') {
+      projectTask.setLevel = 'En cours';
+    }
+    if (projectTask.getLevel === 'En cours') {
+      projectTask.setLevel = 'Terminée';
+    }
+  };
 
   return (
     <Card
       {...cardProps}
-      style={[styles.container, style]}>
+      style={[styles.container, style]}
+      onPress={onCardPress}>
       <ImageOverlay
         style={styles.image}
-        source={ProjectTask.image}>
+        source={projectTask.image}>
         <Text
           style={styles.level}
           category='s1'
           status='control'>
-          {ProjectTask.formattedLevel}
+          {projectTask.formattedLevel}
         </Text>
         <Text
           style={styles.title}
           category='h2'
           status='control'>
-          {ProjectTask.title}
+          {projectTask.title}
+        </Text>
+        <Text
+          category='h6'>
+          {projectTask.description}
         </Text>
         <Button
           style={styles.durationButton}
           size='tiny'
           icon={ClockIcon}>
-          {ProjectTask.formattedDuration}
+          {projectTask.formattedDuration}
         </Button>
       </ImageOverlay>
     </Card>

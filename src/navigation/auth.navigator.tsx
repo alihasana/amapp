@@ -19,6 +19,5 @@ export const AuthNavigator = (): React.ReactElement => (
     <Stack.Screen name='ChangeProfile' component={ChangeProfileScreen}/>
     <Stack.Screen name='Profile' component={ProfileScreen}/>
     <Stack.Screen name='AppNavigator' component={HomeNavigator}/>
-    
   </Stack.Navigator>
 );
